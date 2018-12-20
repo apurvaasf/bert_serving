@@ -1,4 +1,4 @@
-export BERT_BASE_DIR='chinese_L-12_H-768_A-12'
+export BERT_BASE_DIR='uncased_L-12_H-768_A-12'
 python3 run_classifier.py \
 		--data_dir=data \
 		--task_name=chinese \
