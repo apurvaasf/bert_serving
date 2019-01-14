@@ -1,4 +1,4 @@
-export BERT_BASE_DIR='chinese_L-12_H-768_A-12'
+export BERT_BASE_DIR='uncased_L-12_H-768_A-12'
 python3 run_squad.py \
 		--vocab_file=uncased_L-12_H-768_A-12/vocab.txt \
 		--bert_config_file=uncased_L-12_H-768_A-12/bert_config.json \
