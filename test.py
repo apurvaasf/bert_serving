@@ -24,10 +24,10 @@ graph = tf.Graph()
 with graph.as_default():
     with tf.Session() as sess:
         tf.saved_model.loader.load(sess, [tag_constants.SERVING], FLAGS.export_dir)
-        tensor_input_ids = graph.get_tensor_by_name('input_ids:0')
-        tensor_input_mask = graph.get_tensor_by_name('input_mask:0')
-        tensor_unique_ids = graph.get_tensor_by_name('unique_ids:0')
-        tensor_segment_ids = graph.get_tensor_by_name('segment_ids:0')
+        tensor_input_ids = graph.get_tensor_by_name('input_ids_1:0')
+        tensor_input_mask = graph.get_tensor_by_name('input_mask_1:0')
+        tensor_unique_ids = graph.get_tensor_by_name('unique_ids_1:0')
+        tensor_segment_ids = graph.get_tensor_by_name('segment_ids_1:0')
         tensor_outputs = graph.get_tensor_by_name('loss/Softmax:0')
         record_iterator = tf.python_io.tf_record_iterator(path=FLAGS.predict_file)
         for string_record in record_iterator:
